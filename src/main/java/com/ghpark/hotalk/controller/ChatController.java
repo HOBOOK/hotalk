@@ -1,6 +1,7 @@
 package com.ghpark.hotalk.controller;
 
 import com.ghpark.hotalk.model.ChatMessage;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
@@ -8,6 +9,7 @@ import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.web.bind.annotation.RestController;
 
+@Log4j2
 @RestController
 public class ChatController {
     @MessageMapping("/chat.sendMessage")

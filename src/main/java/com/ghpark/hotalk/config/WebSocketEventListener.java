@@ -38,7 +38,7 @@ public class WebSocketEventListener {
         if(username != null){
             log.info("연결 종료 : " + username);
             ChatMessage message = new ChatMessage();
-            message.setChatMessageType(ChatMessageType.LEAVE);
+            message.setType(ChatMessageType.LEAVE);
             message.setSender(username);
             simpMessageSendingOperations.convertAndSend("/topic/public", message);
         }
